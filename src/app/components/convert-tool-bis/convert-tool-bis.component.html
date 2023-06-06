@@ -1,21 +1,21 @@
 
 <!-- <app-capo></app-capo> -->
-<div class="d-flex justify-content-center align-items-center p-3 w-25 mb-5" *ngIf="!user  && !success">You need to be logged in to access</div>
+<div class="text-center" *ngIf="!user  && !success">You need to be logged in to access</div>
 
 <form class="container d-flex flex-column justify-content-center p-3" [formGroup]="capoForm2" (ngSubmit)="onSubmit()" *ngIf="user || success">
 
 
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-12 col-lg-6 contenant">
-    <div class="containerOptions d-flex flex-column">
+    <div class="containerOptions d-flex flex-column justify-content-center">
 
       <p class="text-center">Accordes originales:{{recupNew}}</p>
       <p class="text-center">Acordes transpuestos: {{songChords}}</p>
       <div class="containerButtons text-center">
         <button class="buttonsOptionsWeb btn btn-danger" (click)="updateCapoPosition(-1)"> -1 </button>
-        <label class="form-check-label m-3 ">
-          <p>En qué traste se pone la cejilla?</p>
-          <input matInput type="number" class="form-control text-center" style="appearance: textfield;"
+        <label class="form-check-label">
+          En qué traste se pone la cejilla?
+          <input matInput type="number" class="customInput form-control text-center w-25" style="appearance: textfield;"
             [(ngModel)]="numTrasteValue" required formControlName="numTraste" (change)="onSubmit()" #txtInput>
         </label>
         <button class="buttonsOptionsWeb btn btn-danger" (click)="updateCapoPosition(+1)"> +1 </button>
@@ -24,7 +24,7 @@
 <div class="container_select d-flex flex-column justify-content-center align-items-center p-3">
   <h4 class="text-center"> Introduce los acordes que quieres transponer</h4>
 
-                <select class="js-states js-example-events form-control" multiple="multiple" id="containerSelectBox" style="width: 50px;">
+                <select class="customSelect js-states js-example-events form-control" multiple="multiple" id="containerSelectBox" style="width: 50px;">
                   <optgroup label="major">
                     <option	value="A">A</option>
                     <option	value="A#/Bb">A#/Bb</option>
@@ -57,112 +57,7 @@
 
                 </select>
 </div>
-                <div class="s2-event-log">
-                  <ul class="js-event-log"></ul>
-                </div>
 
-
-
-
-
-<!--  SELECT2 -->
-<!-- <div class="container">
-  <h5 class="text-center">Introduce los acordes:</h5>
-  <div class="container_select d-flex justify-content-center align-items-center p-3">
-      <select #selectBox multiple="multiple" class="js-example-responsive" id="note_selection" style="width: 100%;" (change)="onSubmit()">
-        <optgroup label="major">
-          <option	value="A">A</option>
-          <option	value="A#/Bb">A#/Bb</option>
-          <option	value="B">B</option>
-          <option	value="C">C</option>
-          <option	value="C#/Db">C#/Db</option>
-          <option	value="D">D</option>
-          <option	value="D#/Eb">D#/Eb</option>
-          <option	value="E">E</option>
-          <option	value="F">F</option>
-          <option	value="F#/Gb">F#/Gb</option>
-          <option	value="G">G</option>
-          <option	value="G#/Ab">G#/Ab</option>
-          </optgroup>
-
-          <optgroup label="minor">
-            <option	value="Am">Am</option>
-            <option	value="A#m/Bbm">A#m/Bbm</option>
-            <option	value="Bm">Bm</option>
-            <option	value="Cm">Cm</option>
-            <option	value="C#m/Dbm">C#m/Dbm</option>
-            <option	value="Dm">Dm</option>
-            <option	value="D#m/Ebm">D#m/Ebm</option>
-            <option	value="Em">Em</option>
-            <option	value="Fm">Fm</option>m
-            <option	value="F#m/Gbm">F#m/Gbm</option>
-            <option	value="Gm">Gm</option>
-            <option	value="G#m/Abm">G#m/Abm</option>
-            </optgroup>
-      </select>
-  </div>
-      </div>
- -->
-
-<!--       <select #selectBox2 class="js-states js-example-events form-control" multiple="multiple">
-
-          <optgroup label="major">
-            <option	value="A">A</option>
-            <option	value="A#/Bb">A#/Bb</option>
-            <option	value="B">B</option>
-            <option	value="C">C</option>
-            <option	value="C#/Db">C#/Db</option>
-            <option	value="D">D</option>
-            <option	value="D#/Eb">D#/Eb</option>
-            <option	value="E">E</option>
-            <option	value="F">F</option>
-            <option	value="F#/Gb">F#/Gb</option>
-            <option	value="G">G</option>
-            <option	value="G#/Ab">G#/Ab</option>
-            </optgroup>
-
-            <optgroup label="minor">
-              <option	value="Am">Am</option>
-              <option	value="A#m/Bbm">A#m/Bbm</option>
-              <option	value="Bm">Bm</option>
-              <option	value="Cm">Cm</option>
-              <option	value="C#m/Dbm">C#m/Dbm</option>
-              <option	value="Dm">Dm</option>
-              <option	value="D#m/Ebm">D#m/Ebm</option>
-              <option	value="Em">Em</option>
-              <option	value="Fm">Fm</option>m
-              <option	value="F#m/Gbm">F#m/Gbm</option>
-              <option	value="Gm">Gm</option>
-              <option	value="G#m/Abm">G#m/Abm</option>
-              </optgroup>
-      </select>
-
-
-        <div class="s2-event-log">
-          <ul class="js-event-log"></ul>
-        </div>
- -->
-
-
-
-<!--     <div>
-
-      <div class="col-12 col-lg-6 containerProgressioAcc text-center">
-
-        <label class="form-check-label pb-5">
-          <p>Cuél es la progresión de acordes?</p>
-          <input matInput type="string" class="form-control w-25 text-center" style="appearance: textfield;"
-            [(ngModel)]="theAcc" required formControlName="notasCtrl" (change)="onSubmit()" #txtInput2>
-
-           <span *ngIf="capoForm.invalid" class="form-text text-danger text-center" >
-            Por favor inserte los acordes que necesitas transponer
-          </span>
-        </label>
-<p> {{ notasCtrlArrayGetter }}</p>
-
-      </div>
-    </div>
- -->
 </div>
 
   </div>

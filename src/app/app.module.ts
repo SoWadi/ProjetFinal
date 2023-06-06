@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { ConvertToolComponent } from './components/convert-tool/convert-tool.component';
+//import { ConvertToolComponent } from './components/convert-tool/convert-tool.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ConverterService } from './components/services/converter.service';
 import { CapoComponent } from './components/capo/capo.component';
@@ -33,7 +33,7 @@ import { ConvertToolBisComponent } from './components/convert-tool-bis/convert-t
   declarations: [
     AppComponent,
     HeaderComponent,
-    ConvertToolComponent,
+    //ConvertToolComponent,
     CapoComponent,
     TranspositionComponent,
     HomeComponent,

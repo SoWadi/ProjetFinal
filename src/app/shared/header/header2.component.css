@@ -15,9 +15,9 @@ nav {
   opacity: 0.1; */
 }
 
-.nav-item *{
+/* .nav-item *{
   width: 8rem;
-}
+} */
 
 .nav-item a:hover {
   color: rgb(226, 211, 243);
@@ -34,7 +34,11 @@ nav {
 }
 
 .customUl{
-  margin-left: 60vh;
+  margin-left: 56vh;
+}
+
+.nav > div {
+  border: 2px solid orange;
 }
 /******************************************************************
  *------------------------ MEDIA QUERY ---------------------------*
@@ -63,6 +67,7 @@ nav {
 
   .customUl{
     margin-left: 0vh;
+/*     border: 2px solid orange; */
   }
 
 /*   .navbar-brand{

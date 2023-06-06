@@ -9,7 +9,6 @@
       <div class="card-body">
           <form [formGroup]="form" (ngSubmit)="onSubmit()">
               <div class="mb-3">
-                a@a.fr
                   <label class="form-label">Email:</label>
                   <input type="mail" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
                   <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
