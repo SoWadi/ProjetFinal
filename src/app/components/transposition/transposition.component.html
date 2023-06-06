@@ -1,0 +1,13 @@
+<p>transposition works!</p>
+<h2>Accords d'origine</h2>
+<ul>
+  <li *ngFor="let chord of originalChords">{{ chord }}</li>
+</ul>
+
+<button (click)="transposeChords(1)">Transposer +1 demi-ton</button>
+<button (click)="transposeChords(-1)">Transposer -1 demi-ton</button>
+
+<h2>Accords transposés</h2>
+<ul>
+  <li *ngFor="let chord of transposedChords">{{ chord }}</li>
+</ul>

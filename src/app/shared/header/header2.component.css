@@ -1,0 +1,94 @@
+nav {
+  background-color: blueviolet;
+
+}
+
+#myVideoLogo {
+  height: 5em;
+
+/*   position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.1; */
+}
+
+.nav-item *{
+  width: 8rem;
+}
+
+.nav-item a:hover {
+  color: rgb(226, 211, 243);
+}
+
+.nav-item a:focus {
+  border-bottom: 2px solid rgb(18, 18, 19);
+}
+
+
+.navbar-toggler {
+  background-color: rgba(41, 36, 44, 0.165);
+  position: relative;
+}
+
+.customUl{
+  margin-left: 60vh;
+}
+/******************************************************************
+ *------------------------ MEDIA QUERY ---------------------------*
+******************************************************************/
+@media (min-width: 600px) {
+
+  nav {
+    position: static;
+  }
+
+  .navbar-brand {
+    margin-inline: 10em;
+  }
+
+
+  .navbar-collapse {
+      align-content: center;
+  }
+
+  ul{
+
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .customUl{
+    margin-left: 0vh;
+  }
+
+/*   .navbar-brand{
+    border: 3px solid greenyellow;
+  } */
+}
+@media (min-width: 300px) {
+
+  nav {
+    position: static;
+  }
+  .navbar-collapse {
+      align-content: center;
+  }
+
+  ul{
+
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    /* background-color: yellow; */
+
+  }
+
+
+  .customUl{
+    margin-left: 0vh;
+  }
+}

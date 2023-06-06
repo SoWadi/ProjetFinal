@@ -1,0 +1,27 @@
+*{
+  color: rgb(187, 186, 186);
+}
+
+.contenant{
+  margin-bottom: 10%;
+
+}
+
+
+.containerOptions{
+  border-radius: 1rem;
+  background-color: #171717;
+  padding: 1em;
+  /* width: 40vw; */
+  align-items: center;
+}
+
+select {
+  background-color: aqua;
+}
+
+.buttonsOptionsWeb{
+  background-color: #a6a6a6;
+  color: #1f1f22;
+  border: none;
+}

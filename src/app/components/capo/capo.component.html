@@ -1,0 +1,12 @@
+<form [formGroup]="capoForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="inputText" placeholder="Entrez les accords">
+  <input type="number" formControlName="transposition" placeholder="Transposition">
+  <button type="submit">Soumettre from CAPO (child)</button>
+</form>
+
+<div *ngIf="submitted">
+  <h4>Accords transposés :</h4>
+  <ul>
+    <li *ngFor="let chord of transposedChords">{{ chord }}</li>
+  </ul>
+</div>

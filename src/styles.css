@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "../src/scss/styles.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(38, 38, 38, 0.921);
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  overflow-x: hidden;
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+

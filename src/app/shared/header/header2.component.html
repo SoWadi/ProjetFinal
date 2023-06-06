@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg bg-body-danger text-center  sticky-top  mb-5">
+
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5" href="#">
+      <img src="/assets/logo_projetFinal-removebg-preview.png" alt="logo" height="70">
+<!--       <video autoplay preload="auto" id="myVideoLogo">
+        <source src="/assets/capo.mp4"  type="video/mp4">
+      </video> -->
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="customUl navbar-nav navbar-nav-scroll  d-flex justify-content-center align-items-lg-end justify-content-center justify-content-lg-end align-items-center">
+<!--         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+
+        <li class="nav-item nav-link" >
+          <a class="nav-link phosphorescent" routerLink="" routerLinkActive="active">HOME</a>
+        </li>
+        <li class="nav-item nav-link">
+          <a class="nav-link phosphorescent" routerLink="/toConvertToolComponent" routerLinkActive="active">Convert !</a>
+        </li>
+        <li class="nav-item nav-link">
+          <a class="nav-link phosphorescent" routerLink="/convertPage" routerLinkActive="active">Convert BIS!</a>
+        </li>
+
+      </ul>
+<!--
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Link</a>
+        </li>
+      -->
+
+<!--       <div class="botonesUser px-3" *ngIf="!user || !successGetter"> -->
+      <div class="botonesUser px-3" *ngIf="!user && !successGetter">
+        <button type="button" routerLink="/account/login" class="btn btn-outline-light border-dark m-2">LOGIN</button>
+        <button type="button" routerLink="/account/register" class="btn border-dark m-2">SIGN UP</button>
+      </div>
+
+<!--       <div class="botonesUserOut navbar navbar-expand navbar-dark p-3 d-flex flex-column" *ngIf="user &&  successGetter"> -->
+      <div class="botonesUserOut navbar navbar-expand navbar-dark p-3 d-flex flex-column" *ngIf="user || successGetter">
+        <!-- <a class="nav-item nav-link" routerLink="/">Home</a> -->
+        <!-- <p> <small> Estás conectado como: {{user?.firstName}} </small></p> -->
+        <button class="btn btn-dark me-2" (click)="compo_Logout()"><i class="fa-sharp fa-solid fa-power-off"> </i>   Logout</button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
