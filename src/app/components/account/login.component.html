@@ -12,14 +12,29 @@
                   <label class="form-label">Email:</label>
                   <input type="mail" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
                   <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                      <div *ngIf="f.email.errors.required">Email is required</div>
+                    <span class="form-text text-danger ms-5" *ngIf="isValidEmail('email') && submitted">
+                      * Enter a valid Email
+                    </span>
                   </div>
+
+                 <!--  <input
+                  type="email"
+                  class="modal-body form-control"
+                  placeholder="Email Address"
+                  formControlName="email"
+                />
+
+                <span class="form-text text-danger ms-5" *ngIf="isValidEmail('email') && submitted">
+                * Enter a valid Email
+              </span>
+ -->
+
               </div>
               <div class="mb-3">
                   <label class="form-label">Password</label>
                   <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
                   <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                      <div *ngIf="f.password.errors.required">Password is required</div>
+                      <span  class="form-text text-danger ms-5" *ngIf="f.password.errors.required">Password is required</span>
                   </div>
               </div>
               <div>
@@ -30,7 +45,7 @@
                   <!-- <a routerLink="../register" class="btn btn-link">Register</a> -->
               </div>
           </form>
-          <p>  Not a member yet? <a  href="/account/register">Sign in!</a></p>
+          <p>  Not a member yet? <a class="text-light" href="/account/register">Sign in!</a></p>
       </div>
   </div>
 </div>

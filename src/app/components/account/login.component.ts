@@ -19,6 +19,10 @@ export class LoginComponent implements OnInit {
     error?: string;
     success?: string;
 
+    isValidEmail(inputEmail: string) {
+      return this.form.controls[inputEmail].errors;
+    }
+
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
@@ -34,7 +38,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.form = this.formBuilder.group({
-            email: ['', Validators.required],
+            email: ['', [Validators.required, Validators.email]],
             password: ['', Validators.required]
         });
 
@@ -74,6 +78,7 @@ export class LoginComponent implements OnInit {
                 },
                 error: error => {
                     this.error = error;
+                    console.log(error);
                     this.loading = false;
                 }
             });
