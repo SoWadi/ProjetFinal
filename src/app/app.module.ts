@@ -20,6 +20,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 //import { ConvertToolBisComponent } from './components/convert-tool-bis/convert-tool-bis.component';
 //import { ConvertToolBisComponent } from "./components/convert-tool-bis";
 import { ConvertToolBisComponent } from './components/convert-tool-bis/convert-tool-bis.component';
+import { RandomTunesComponent } from './components/random-tunes/random-tunes.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ConvertToolBisComponent } from './components/convert-tool-bis/convert-t
     RegisterComponent,
     FooterComponent,
     ConvertToolBisComponent,
+    RandomTunesComponent,
 
 
     /* HeaderComponent,

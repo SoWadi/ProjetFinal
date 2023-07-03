@@ -121,3 +121,12 @@ SAFETY LOGIN:
       </div>
   </div>
 </div>
+Por qué transponer acordes:
+
+para ajustarse a la voz del cantante
+para ajustar a otro instrumentos, por ejemplo el celo funciona con clave de fa, porque tiene una tesitura mas baja
+CAPO TRANSLATER permite modificar el tono de una melodia, sin tener que limitar las posibilidades de la guitrra con una cejilla y sin tener que reafinar la guitarra
+
+
+
+Problème : Mettez en évidence les défis auxquels les musiciens sont confrontés lorsqu'ils doivent transposer des notes, tels que les changements de tonalité et les différentes gammes utilisées.
